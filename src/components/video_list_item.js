@@ -30,7 +30,7 @@ class VideoListItem extends Component {
     return(
       <li className="video-list-item grouping" onClick={this.selectVideo}>
         <div className="thumbnail float-left"><img src={thumbnail} /></div>
-        <div className="video-name float-right">{this.props.video.snippet.title}</div>
+        <div className="video-name float-right video-desc">{this.props.video.snippet.title}</div>
       </li>
     );
   }

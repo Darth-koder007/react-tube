@@ -123,6 +123,7 @@ Modular Styles
   border-width: 1px;
   border-color: #CCC;
   box-shadow: 2px 2px 2px #d6d6d6;
+  padding-left: 10px;
 }
 
 .video-detail {
@@ -136,6 +137,10 @@ Modular Styles
   float:right;
   width:40%;
   text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #CCC;
+  border-radius: 5px;
 }
 
 .video-name {
@@ -145,7 +150,7 @@ Modular Styles
 }
 
 .video-desc {
-
+    font-size: 14px;
 }
 
 .video-frame iframe{
@@ -159,4 +164,14 @@ Modular Styles
 
 .thumbnail {
   margin: 20px auto;
+  margin-left: 10px;
+}
+
+.video-list-item {
+  border-bottom: 1px solid #CCC;
+  border-radius:5px;
+}
+
+.video-list-item:hover {
+  background-color: #EEE;
 }
