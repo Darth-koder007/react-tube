@@ -28,9 +28,9 @@ class VideoListItem extends Component {
     let thumbnail = this.props.video.snippet.thumbnails.default.url;
 
     return(
-      <li className="video-list-item" onClick={this.selectVideo}>
-        <div className="thumbnail"><img src={thumbnail} /></div>
-        <div className="video-name">{this.props.video.snippet.title}</div>
+      <li className="video-list-item grouping" onClick={this.selectVideo}>
+        <div className="thumbnail float-left"><img src={thumbnail} /></div>
+        <div className="video-name float-right">{this.props.video.snippet.title}</div>
       </li>
     );
   }

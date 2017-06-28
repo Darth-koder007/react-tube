@@ -69,6 +69,41 @@ img, iframe, video, object {
   max-width: 100%;
 }
 
+/***************
+Modular Styles
+***************/
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.bold {
+  font-weight: bold;
+}
+.hidden,
+.hide {
+  display: none;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.text-centered {
+  text-align: center;
+}
+
 /* custom */
 
 .container {
@@ -92,8 +127,9 @@ img, iframe, video, object {
 
 .video-detail {
   float:left;
-  width:60%;
+  width:50%;
   text-align: center;
+  margin: 20px auto;
 }
 
 .video-list {
@@ -102,14 +138,25 @@ img, iframe, video, object {
   text-align: center;
 }
 
-.video-frame {
-
+.video-name {
+  width: 60%;
+  text-align: start;
+  margin: 20px auto;
 }
 
 .video-desc {
 
 }
 
-.wrapper {
+.video-frame iframe{
+  height:360px;
+  width:640px;
+}
 
+.loader {
+  text-align: center;
+}
+
+.thumbnail {
+  margin: 20px auto;
 }
