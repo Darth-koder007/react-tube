@@ -6,19 +6,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,23 +95,36 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1.4;
   font-family: Arial, Helvetica, sans-serif;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 table {
@@ -65,7 +146,10 @@ strong {
 .grouping:after {
   clear: both;
 }
-img, iframe, video, object {
+img,
+iframe,
+video,
+object {
   max-width: 100%;
 }
 
@@ -121,25 +205,25 @@ Modular Styles
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #CCC;
+  border-color: #ccc;
   box-shadow: 2px 2px 2px #d6d6d6;
   padding-left: 10px;
 }
 
 .video-detail {
-  float:left;
-  width:50%;
+  float: left;
+  width: 50%;
   text-align: center;
   margin: 20px auto;
 }
 
 .video-list {
-  float:right;
-  width:40%;
+  float: right;
+  width: 40%;
   text-align: center;
   border-style: solid;
   border-width: 1px;
-  border-color: #CCC;
+  border-color: #ccc;
   border-radius: 5px;
 }
 
@@ -150,12 +234,12 @@ Modular Styles
 }
 
 .video-desc {
-    font-size: 14px;
+  font-size: 14px;
 }
 
-.video-frame iframe{
-  height:360px;
-  width:640px;
+.video-frame iframe {
+  height: 360px;
+  width: 640px;
 }
 
 .loader {
@@ -168,10 +252,10 @@ Modular Styles
 }
 
 .video-list-item {
-  border-bottom: 1px solid #CCC;
-  border-radius:5px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .video-list-item:hover {
-  background-color: #EEE;
+  background-color: #eee;
 }

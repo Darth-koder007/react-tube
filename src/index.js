@@ -1,75 +1,19 @@
-/**
- * Import vendor modules
- */
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import YTSearch from 'youtube-api-search';
+import "./index.css";
 
-/**
- * Import custom components
- */
-import SearchBar from './components/search_bar';
-import VideoList from './components/video_list';
-import VideoDetail from './components/video_detail';
+import * as serviceWorker from "./serviceWorker";
 
-/**
- * Youtube search apikey
- * @type {String}
- */
-const API_KEY = 'AIzaSyBO2d_PYJ3aYobvnCa3naUmM3YJzn6pefE';
+import App from "./App";
+import React from "react";
+import ReactDOM from "react-dom";
 
-export class APP extends Component {
-  constructor(props) {
-    super(props);
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
-    this.searchYoutube = this.searchYoutube.bind(this);
-    this.changeSelectedVideo = this.changeSelectedVideo.bind(this);
-    this.state = {
-      videos: [],
-      selectedVideo: null
-    };
-  }
-
-  searchYoutube(term) {
-    YTSearch({key:API_KEY, term: term}, (data) => {
-      this.setState({
-          videos: data,
-          selectedVideo: data[0]
-      });
-    });
-  }
-
-  changeSelectedVideo(video) {
-    this.setState({ selectedVideo: video });
-  }
-
-  /**
-   * Creates a new component.
-   * It should produce some html
-   * @return {String}
-   */
-  render() {
-
-    return(
-      <div className="container-main">
-        <SearchBar onSearchInput={this.searchYoutube} />
-        {
-          this.state.videos.length > 0
-          ?
-          (
-            <div className="wrapper grouping">
-              <VideoDetail selectedVideo={this.state.selectedVideo}/>
-              <VideoList videos={this.state.videos} selectVideo={this.changeSelectedVideo} />
-            </div>
-          )
-          :
-          (
-            <div className="loader">Loading...</div>
-          )
-        }
-      </div>
-    );
-  }
-};
-
-ReactDOM.render(<APP />, document.querySelector('.container'));
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
