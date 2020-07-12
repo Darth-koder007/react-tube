@@ -258,4 +258,5 @@ Modular Styles
 
 .video-list-item:hover {
   background-color: #eee;
+  cursor: pointer;
 }
