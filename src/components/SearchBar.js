@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import youtubeicon from "../youtube.svg";
+
 const SearchBar = ({ onSearchInput }) => {
   const [term, setTerm] = useState("");
 
@@ -11,7 +13,12 @@ const SearchBar = ({ onSearchInput }) => {
 
   return (
     <div className="search-bar">
-      <input onChange={onSearch} placeholder={"Type To Search"} />
+      <div className="image-container">
+        <img src={youtubeicon} alt="youtube-icon" />
+      </div>
+      <div className="input-container">
+        <input onChange={onSearch} placeholder={"Type To Search"} />
+      </div>
     </div>
   );
 };

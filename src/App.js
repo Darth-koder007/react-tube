@@ -23,7 +23,6 @@ const App = () => {
     setLoading(true);
     searchYoutube({ key: API_KEY, term: term }, (data) => {
       setLoading(false);
-      console.log("data", data);
       setVideos(data);
       setSelectedVideo(data[0]);
     });
