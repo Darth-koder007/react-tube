@@ -11,15 +11,12 @@ const VideoListItem = ({ video, setSelectVideo }) => {
   } = video;
 
   return (
-    <li
-      className="video-list-item grouping"
-      onClick={() => setSelectVideo(video)}
-    >
-      <div className="thumbnail float-left">
-        <img src={url} alt="thumbnail" />
+    <div className="video-list-item" onClick={() => setSelectVideo(video)}>
+      <img src={url} alt="thumbnail" />
+      <div className="video-name video-desc">
+        <p>{title}</p>
       </div>
-      <div className="video-name float-right video-desc">{title}</div>
-    </li>
+    </div>
   );
 };
 

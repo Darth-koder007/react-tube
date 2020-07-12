@@ -2,6 +2,7 @@ import "./App.css";
 
 import React, { useState } from "react";
 
+import Loader from "./loader.svg";
 import SearchBar from "./components/SearchBar";
 import VideoDetail from "./components/VideoDetail";
 import VideoList from "./components/VideoList";
@@ -32,12 +33,16 @@ const App = () => {
     <div className="container-main">
       <SearchBar onSearchInput={onSearchInput} />
       {videos.length > 0 && !loading && (
-        <div className="wrapper grouping">
+        <div className="wrapper">
           {selectedVideo && <VideoDetail selectedVideo={selectedVideo} />}
           <VideoList videos={videos} setSelectVideo={setSelectedVideo} />
         </div>
       )}
-      {loading && <div className="loader">Loading...</div>}
+      {loading && (
+        <div className="loader">
+          <img className="loader" src={Loader} alt="loader" />
+        </div>
+      )}
     </div>
   );
 };
