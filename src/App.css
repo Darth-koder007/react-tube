@@ -190,20 +190,14 @@ Modular Styles
 
 /* custom */
 
-.container {
-  margin: 100px;
-}
-
 .search-bar {
-  padding: 65px 65px;
-  text-align: left;
+  padding: 25px;
   background-color: #ff1d58;
   display: flex;
   justify-content: center;
 }
 
 .search-bar input {
-  width: 50%;
   height: 28px;
   border-radius: 5px;
   border-style: solid;
@@ -214,7 +208,7 @@ Modular Styles
 }
 
 .search-bar .image-container img {
-  width: 80px;
+  width: 50px;
 }
 
 .search-bar .image-container {
@@ -234,56 +228,94 @@ Modular Styles
   width: 500px;
 }
 
-.video-detail {
-  float: left;
-  width: 640px;
-  text-align: center;
-}
-
 .video-list {
-  float: right;
-  width: 400px;
-  text-align: center;
   border-style: solid;
   border-width: 1px;
   border-color: #ccc;
   border-radius: 5px;
-}
-
-.video-name {
-  width: 60%;
-  text-align: start;
-  margin: 25px auto;
+  margin-left: 40px;
+  max-width: 400px;
 }
 
 .video-desc {
   font-size: 20px;
+  margin-left: 10px;
+  max-width: 600px;
 }
 
 .video-list-item .video-desc {
   font-size: 14px;
+  max-width: 200px;
 }
 
 .video-frame iframe {
-  height: 360px;
   width: 640px;
+  height: 360px;
 }
 
 .loader {
   text-align: center;
-}
-
-.thumbnail {
-  margin: 20px auto;
-  margin-left: 10px;
+  margin-top: 50px;
 }
 
 .video-list-item {
   border-bottom: 1px solid #ccc;
   border-radius: 5px;
+  display: flex;
+  padding: 10px;
 }
 
 .video-list-item:hover {
   background-color: #eee;
   cursor: pointer;
+}
+
+.wrapper {
+  padding: 40px 120px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-main .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    padding: unset;
+    text-align: center;
+    align-items: center;
+  }
+
+  .container-main .wrapper .video-frame iframe {
+    height: unset;
+    width: unset;
+  }
+
+  .container-main .wrapper .video-detail,
+  .container-main .wrapper .video-list {
+    width: unset;
+  }
+
+  .container-main .search-bar {
+    padding: 25px;
+  }
+
+  .container-main .search-bar .image-container img {
+    width: 45px;
+  }
+
+  .container-main .search-bar .input-container input {
+    width: 150px;
+  }
+
+  .container-main .wrapper .video-list {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
 }

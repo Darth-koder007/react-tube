@@ -3,15 +3,13 @@ import VideoListItem from "./VideoListItem";
 
 const VideoList = ({ setSelectVideo, videos }) => (
   <div className="video-list">
-    <ul>
-      {videos.map((video) => (
-        <VideoListItem
-          video={video}
-          key={video.etag}
-          setSelectVideo={setSelectVideo}
-        />
-      ))}
-    </ul>
+    {videos.map((video) => (
+      <VideoListItem
+        video={video}
+        key={video.etag}
+        setSelectVideo={setSelectVideo}
+      />
+    ))}
   </div>
 );
 
