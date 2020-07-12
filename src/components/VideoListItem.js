@@ -11,7 +11,10 @@ const VideoListItem = ({ video, setSelectVideo }) => {
   } = video;
 
   return (
-    <li className="video-list-item grouping" onClick={setSelectVideo}>
+    <li
+      className="video-list-item grouping"
+      onClick={() => setSelectVideo(video)}
+    >
       <div className="thumbnail float-left">
         <img src={url} alt="thumbnail" />
       </div>
