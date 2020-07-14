@@ -39,7 +39,7 @@ const App = () => {
         </div>
       )}
       {loading && (
-        <div className="loader">
+        <div className="loader" data-test-id="loader">
           <img className="loader" src={Loader} alt="loader" />
         </div>
       )}

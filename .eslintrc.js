@@ -15,8 +15,11 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: "module",
   },
-  plugins: ["react"],
+  plugins: ["cypress", "react"],
   rules: {
     "react/prop-types": 0,
+  },
+  env: {
+    "cypress/globals": true,
   },
 };

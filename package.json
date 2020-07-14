@@ -3,20 +3,20 @@
   "version": "1.0.0",
   "homepage": "https://darth-koder007.github.io/react-tube",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
-    "env-cmd": "^10.1.0",
+    "lodash": "^4.17.19",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "env-cmd -f .env.default react-scripts start",
+    "start:test": "env-cmd -f .env.test react-scripts start",
     "build": "env-cmd -f .env.default react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,8 +34,10 @@
     ]
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -45,7 +47,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "miragejs": "^0.1.40",
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "@testing-library/cypress": "^6.0.0"
   },
   "husky": {
     "hooks": {

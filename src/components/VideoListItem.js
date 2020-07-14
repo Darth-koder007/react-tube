@@ -11,7 +11,11 @@ const VideoListItem = ({ video, setSelectVideo }) => {
   } = video;
 
   return (
-    <div className="video-list-item" onClick={() => setSelectVideo(video)}>
+    <div
+      className="video-list-item"
+      onClick={() => setSelectVideo(video)}
+      data-test-id="video-list-item-container"
+    >
       <img src={url} alt="thumbnail" />
       <div className="video-name video-desc">
         <p>{title}</p>

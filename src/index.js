@@ -7,7 +7,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import makeServer from "./server";
 
-makeServer();
+if (process.env.REACT_APP_TEST_MODE) {
+  makeServer();
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
