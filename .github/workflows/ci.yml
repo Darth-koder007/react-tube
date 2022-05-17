@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - master
+env:
+  CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.CICD_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run: npm i
+
+      - name: Test and coverage
+        run: npm run test -- --coverage
+
+      - name: Codacy Coverage Reporter
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ./coverage/lcov.info
+
+      - name: Build
+        run: npm run build
