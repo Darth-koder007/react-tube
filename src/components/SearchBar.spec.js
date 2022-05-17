@@ -7,5 +7,5 @@ test("should trigger callback fn", async () => {
   render(<SearchBar onSearchInput={fn} />);
   const inputEl = screen.getByPlaceholderText("Type To Search");
   fireEvent.change(inputEl, { target: { value: label } });
-  await waitFor(() => expect(fn).toBeCalledWith(label));
+  await waitFor(() => expect(fn).toBeCalled());
 });
