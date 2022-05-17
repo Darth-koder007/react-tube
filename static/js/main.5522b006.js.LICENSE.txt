@@ -1,9 +1,3 @@
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
 /**
  * @license
  * Lodash <https://lodash.com/>
@@ -14,28 +8,7 @@ object-assign
  */
 
 /**
- * Minimal Event interface implementation
- *
- * Original implementation by Sven Fuchs: https://gist.github.com/995028
- * Modifications and tests by Christian Johansen.
- *
- * @author Sven Fuchs (svenfuchs@artweb-design.de)
- * @author Christian Johansen (christian@cjohansen.no)
- * @license BSD
- *
- * Copyright (c) 2011 Sven Fuchs, Christian Johansen
- */
-
-/** @license React v0.19.1
- * scheduler.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/** @license React v16.13.1
+ * @license React
  * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -44,8 +17,29 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.13.1
+/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
  * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
