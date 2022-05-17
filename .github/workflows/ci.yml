@@ -21,7 +21,7 @@ jobs:
         run: npm run test -- --coverage
 
       - name: Codacy Coverage Reporter
-        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ./coverage/lcov.info
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
 
       - name: Build
         run: npm run build
