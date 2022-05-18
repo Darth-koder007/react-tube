@@ -25,3 +25,17 @@ test("should call the callback for video list on clicking", () => {
   fireEvent.click(videoListEl);
   expect(fn).toHaveBeenCalled();
 });
+
+test("should call the callback for video list on clicking with specific number of time", () => {
+  render(<VideoListItem video={video} key={video.etag} setSelectVideo={fn} />);
+  const videoListEl = screen.getByText(video.snippet.title);
+  fireEvent.click(videoListEl);
+  expect(fn).toHaveBeenCalledTimes(1);
+});
+
+test("should call the callback for video list on clicking with specific argument", () => {
+  render(<VideoListItem video={video} key={video.etag} setSelectVideo={fn} />);
+  const videoListEl = screen.getByText(video.snippet.title);
+  fireEvent.click(videoListEl);
+  expect(fn).toHaveBeenCalledWith(video);
+});
